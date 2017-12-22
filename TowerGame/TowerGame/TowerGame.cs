@@ -12,10 +12,14 @@ namespace TowerGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private MainGame mainGame;
+
         public TowerGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            mainGame = new MainGame();
         }
 
         /// <summary>
@@ -27,6 +31,7 @@ namespace TowerGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            mainGame.Initialize(spriteBatch, graphics, Content);
 
             base.Initialize();
         }
@@ -39,7 +44,7 @@ namespace TowerGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            mainGame.Load();
             // TODO: use this.Content to load your game content here
         }
 
@@ -63,6 +68,7 @@ namespace TowerGame
                 Exit();
 
             // TODO: Add your update logic here
+            mainGame.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -76,7 +82,7 @@ namespace TowerGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            mainGame.Draw();
             base.Draw(gameTime);
         }
     }
