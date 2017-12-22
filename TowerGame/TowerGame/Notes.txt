@@ -1,0 +1,7 @@
+﻿Towerfall clone.
+
+Simple bow and arrow. No upgrades to begin with.
+
+First iteration: 1 level. 1v1. Player1 WASD. Player2 Arrow keys. Shoot in the direction of movement.
+
+IEntity, IDrawable and ICollideable.
