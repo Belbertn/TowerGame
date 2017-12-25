@@ -41,10 +41,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CollisionManager.cs" />
     <Compile Include="ICollideable.cs" />
     <Compile Include="IDrawable.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="MainGame.cs" />
+    <Compile Include="RenderManager.cs" />
     <Compile Include="TowerGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

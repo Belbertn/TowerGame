@@ -16,11 +16,19 @@ namespace TowerGame
         private GraphicsDeviceManager graphicsDevice;
         private ContentManager contentManager;
 
+        private CollisionManager collisionManager;
+        private RenderManager renderManager;
+
         public void Initialize(SpriteBatch batch, GraphicsDeviceManager device, ContentManager manager)
         {
             spriteBatch = batch;
             graphicsDevice = device;
             contentManager = manager;
+
+            collisionManager = new CollisionManager();
+            collisionManager.Initialize();
+            renderManager = new RenderManager();
+            renderManager.Initialize(spriteBatch, graphicsDevice);
         }
 
         public void Load()
@@ -30,14 +38,12 @@ namespace TowerGame
 
         public void Update(GameTime gameTime)
         {
-
+            collisionManager.Update(gameTime);
         }
 
         public void Draw()
         {
-            spriteBatch.Begin();
-
-            spriteBatch.End();
+            renderManager.Draw();
         }
     }
 }
