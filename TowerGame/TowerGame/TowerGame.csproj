@@ -46,6 +46,7 @@
     <Compile Include="IDrawable.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="MainGame.cs" />
+    <Compile Include="PhysicsActor.cs" />
     <Compile Include="RenderManager.cs" />
     <Compile Include="TowerGame.cs" />
     <Compile Include="Program.cs" />
